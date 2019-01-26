@@ -411,7 +411,7 @@ window.patch = function (lastNode, nextNode, container) {
   return nextNode
 }
 
-const h = function (name, props) {
+windows.h = function (name, props) {
   var node
   var rest = []
   var children = []
@@ -442,5 +442,3 @@ const h = function (name, props) {
     : createVNode(name, props, children, null, props.key, DEFAULT)
 }
 
-const createElement = h;
-window.React = {h};
