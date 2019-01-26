@@ -397,11 +397,11 @@ var recycleElement = function (element) {
   )
 }
 
-window.recycle = function (container) {
+const recycle = function (container) {
   return recycleElement(container.children[0])
 }
 
-window.patch = function (lastNode, nextNode, container) {
+const patch = function (lastNode, nextNode, container) {
   var lifecycle = []
 
   patchElement(container, container.children[0], lastNode, nextNode, lifecycle)
@@ -411,7 +411,7 @@ window.patch = function (lastNode, nextNode, container) {
   return nextNode
 }
 
-window.h = function (name, props) {
+const h = function (name, props) {
   var node
   var rest = []
   var children = []
@@ -441,3 +441,5 @@ window.h = function (name, props) {
     ? name(props, (props.children = children))
     : createVNode(name, props, children, null, props.key, DEFAULT)
 }
+
+window.superfine = {recycle, patch, h};
