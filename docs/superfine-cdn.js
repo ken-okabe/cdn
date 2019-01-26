@@ -411,7 +411,7 @@ window.patch = function (lastNode, nextNode, container) {
   return nextNode
 }
 
-windows.h = function (name, props) {
+window.h = function (name, props) {
   var node
   var rest = []
   var children = []
