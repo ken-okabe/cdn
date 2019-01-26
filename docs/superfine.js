@@ -397,11 +397,11 @@ var recycleElement = function (element) {
   )
 }
 
-export var recycle = function (container) {
+window.recycle = function (container) {
   return recycleElement(container.children[0])
 }
 
-export var patch = function (lastNode, nextNode, container) {
+window.patch = function (lastNode, nextNode, container) {
   var lifecycle = []
 
   patchElement(container, container.children[0], lastNode, nextNode, lifecycle)
@@ -411,7 +411,7 @@ export var patch = function (lastNode, nextNode, container) {
   return nextNode
 }
 
-export var h = function (name, props) {
+window.h = function (name, props) {
   var node
   var rest = []
   var children = []
