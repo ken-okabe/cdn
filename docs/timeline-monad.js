@@ -38,4 +38,5 @@ const T = ((Events) => (timeFunction = () => { }) => {
   timeFunction(timeline);
   return timeline;
 })(Events);
-export { T };
+//export { T };
+window.T = T;
